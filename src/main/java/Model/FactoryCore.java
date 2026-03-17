@@ -1,4 +1,4 @@
-package Model.Factory;
+package Model;
 
 public class FactoryCore {
 }

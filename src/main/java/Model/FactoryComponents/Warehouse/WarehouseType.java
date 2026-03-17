@@ -1,4 +1,4 @@
-package Model.FabricComponents.Warehouse;
+package Model.FactoryComponents.Warehouse;
 
 public enum WarehouseType {
     BODY_CAR,
