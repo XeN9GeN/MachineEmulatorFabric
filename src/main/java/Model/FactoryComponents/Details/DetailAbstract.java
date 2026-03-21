@@ -1,5 +1,5 @@
 package Model.FactoryComponents.Details;
 
-public class Body extends DetailAbstract {
+public abstract class DetailAbstract {
 
 }

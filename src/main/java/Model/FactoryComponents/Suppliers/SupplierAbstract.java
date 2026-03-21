@@ -1,4 +1,9 @@
 package Model.FactoryComponents.Suppliers;
 
-public class SupplierAbstract {
+import Model.FactoryComponents.Details.DetailType;
+import Model.FactoryComponents.Warehouse.Warehouse;
+
+public abstract class SupplierAbstract {
+
 }
+

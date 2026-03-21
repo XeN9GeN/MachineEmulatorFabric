@@ -1,4 +1,9 @@
 package Model.FactoryComponents.Suppliers;
 
-public class EngineSupplier {
+import Model.FactoryComponents.Details.DetailType;
+import Model.FactoryComponents.Warehouse.Warehouse;
+
+public class EngineSupplier extends SupplierAbstract {
+
+
 }

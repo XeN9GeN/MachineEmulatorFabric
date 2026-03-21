@@ -1,8 +1,7 @@
 package Model.FactoryComponents.Warehouse;
 
-public class Warehouse extends WarehouseAbstract implements WarehouseInt{
+import Model.FactoryComponents.Details.DetailType;
 
-    public Warehouse(int i,int s,int c, WarehouseType t){
-        super(i,s,c,t);
-    }
+public class Warehouse{
+
 }
