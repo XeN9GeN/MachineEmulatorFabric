@@ -1,0 +1,7 @@
+BodyWarehouseSize = 100;
+EngineWarehouseSize = 100;
+AccessoryWarehouseSize = 100;
+ProductWarehouseSize = 100;
+AccessorySuppliers = 5;
+Workers = 10;
+Dealers = 20;

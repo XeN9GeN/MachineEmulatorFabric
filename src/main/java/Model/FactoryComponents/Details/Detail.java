@@ -1,13 +1,7 @@
 package Model.FactoryComponents.Details;
 
 public abstract class Detail {
-    private final int id;
-    //private final double creation_time;
+    private int id;
 
-    protected Detail(int id){
-        this.id=id;
-    }
-    public int getId(){
-        return this.id;
-    }
+    public Detail(int i){ id = i; }
 }
