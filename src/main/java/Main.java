@@ -1,4 +1,5 @@
 
+import Model.FactoryComponents.Dealers.Dealer;
 import Model.FactoryComponents.Details.*;
 import Model.FactoryComponents.FinishedProducts.Cars;
 import Model.FactoryComponents.Suppliers.*;
@@ -20,11 +21,16 @@ public class Main {
                 (b,e,a) -> new Cars(b,e,a),120);
         Worker worker2 = new Worker(bodyWarehouse,engineWarehouse,accessoryWarehouse, carsWarehouse,
                 (b,e,a) -> new Cars(b,e,a), 100);
+        Dealer dealer1 = new Dealer(carsWarehouse,(c) -> System.out.println("Car was successfully sold"), 200);
+        Dealer dealer2 = new Dealer(carsWarehouse,(c) -> System.out.println("Car was successfully sold"), 100);
+
 
         new Thread(bodySupplier).start();
         new Thread(engineSupplier).start();
         new Thread(accessorySupplier).start();
         new Thread(worker1).start();
         new Thread(worker2).start();
+        new Thread(dealer1).start();
+        new Thread(dealer2).start();
     }
 }
