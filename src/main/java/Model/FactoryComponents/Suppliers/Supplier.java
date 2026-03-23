@@ -23,7 +23,7 @@ public class Supplier<T extends Detail> implements Runnable{
                 w.put(detail);
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                Thread.currentThread().interrupt();
             }
         }
     }

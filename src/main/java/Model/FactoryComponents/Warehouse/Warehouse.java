@@ -2,6 +2,7 @@ package Model.FactoryComponents.Warehouse;
 
 
 import Model.FactoryComponents.Details.Detail;
+import Model.FactoryComponents.FinishedProducts.Cars;
 
 import java.util.LinkedList;
 
@@ -15,10 +16,12 @@ public class Warehouse<T>{
     public synchronized void put(T item) throws InterruptedException{
         try {
             while (list.size()>=capacity) wait();
-        }catch (InterruptedException e){}
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
 
         list.add(item);
-        System.out.println("Supplier delivered 1 detail");
+        System.out.println("Supplier delivered 1 item: " + item.getClass().getSimpleName());
         System.out.println("Amount in warehouse " + getSize());
         notifyAll();
     }
@@ -26,10 +29,12 @@ public class Warehouse<T>{
     public synchronized T take() throws InterruptedException{
         try {
             while (list.isEmpty()) wait();
-        }catch (InterruptedException e ){}
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
 
         T obj = list.removeFirst();
-        System.out.println("Worker took 1 detail\n");
+        System.out.println("Worker took 1 item");
         notifyAll();
         return obj;
     }

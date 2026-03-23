@@ -2,24 +2,27 @@ package Model.FactoryComponents.Workers;
 
 import Model.FactoryComponents.Details.Accessory;
 import Model.FactoryComponents.Details.Body;
-import Model.FactoryComponents.Details.Detail;
 import Model.FactoryComponents.Details.Engine;
 import Model.FactoryComponents.FinishedProducts.Cars;
 import Model.FactoryComponents.Warehouse.Warehouse;
 
-public class Worker<T extends Detail> implements Runnable{
+public class Worker implements Runnable{
   private final Warehouse<Body> bodyWarehouse;
   private final Warehouse<Engine> engineWarehouse;
   private final Warehouse<Accessory> accessoryWarehouse;
   private final Warehouse<Cars> carsWarehouse;
+  private final CarCreator carCreator;
+  private static int workerID=0;
   private final int delay;
 
-  public Worker(Warehouse<Body> bw, Warehouse<Engine> ew, Warehouse<Accessory> aw, Warehouse<Cars> c, int d){
+  public Worker(Warehouse<Body> bw, Warehouse<Engine> ew, Warehouse<Accessory> aw, Warehouse<Cars> c, CarCreator i, int d){
       this.bodyWarehouse=bw;
       this.engineWarehouse=ew;
       this.accessoryWarehouse=aw;
       this.carsWarehouse=c;
+      this.carCreator = i;
       this.delay = d;
+      workerID++;
   }
 
   @Override
@@ -29,19 +32,16 @@ public class Worker<T extends Detail> implements Runnable{
              Engine e = engineWarehouse.take();
              Body b = bodyWarehouse.take();
              Accessory a = accessoryWarehouse.take();
-             Cars t = doCar(b,e,a);
-             System.out.println("Car was successfully created");
+
+             Cars t = carCreator.doCar(b,e,a);
+             System.out.println("Car was successfully created by " + workerID + " worker");
              sendCar(t);
              System.out.println("Car was successfully sent on a finished product warehouse");
              Thread.sleep(delay);
           }
-      } catch (RuntimeException | InterruptedException e) {
-          throw new RuntimeException(e);
+      }  catch (InterruptedException e) {
+          Thread.currentThread().interrupt();
       }
-  }
-
-  public Cars doCar(Body detail1, Engine detail2, Accessory detail3){
-      return new Cars(detail1,detail2,detail3);
   }
 
   public void sendCar(Cars c){
