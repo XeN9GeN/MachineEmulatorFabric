@@ -6,7 +6,7 @@ import Model.FactoryComponents.Details.Detail;
 import java.util.LinkedList;
 
 
-public class Warehouse<T extends Detail>{
+public class Warehouse<T>{
     private final LinkedList<T> list = new LinkedList<>();
     private final int capacity;
 
