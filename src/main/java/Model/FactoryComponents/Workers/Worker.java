@@ -12,17 +12,20 @@ public class Worker implements Runnable{
   private final Warehouse<Accessory> accessoryWarehouse;
   private final Warehouse<Cars> carsWarehouse;
   private final CarCreator carCreator;
-  private static int workerID=0;
+  private static int totalWorkers=0;
+  private int workerID=0;
   private final int delay;
 
-  public Worker(Warehouse<Body> bw, Warehouse<Engine> ew, Warehouse<Accessory> aw, Warehouse<Cars> c, CarCreator i, int d){
+  public Worker(Warehouse<Body> bw, Warehouse<Engine> ew, Warehouse<Accessory> aw, Warehouse<Cars> c,
+                CarCreator i, int d){
       this.bodyWarehouse=bw;
       this.engineWarehouse=ew;
       this.accessoryWarehouse=aw;
       this.carsWarehouse=c;
       this.carCreator = i;
       this.delay = d;
-      workerID++;
+      totalWorkers++;
+      this.workerID=totalWorkers;
   }
 
   @Override

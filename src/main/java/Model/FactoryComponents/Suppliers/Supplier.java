@@ -12,7 +12,7 @@ public class Supplier<T extends Detail> implements Runnable{
     public Supplier(Warehouse<T> w, int delay, Deliver<T> d) {
         this.w=w;
         this.delay=delay;
-        this.deliver=d;
+        this.deliver=d;//под функ. интерфейс, лямбда находится в main
     }
 
     @Override

@@ -34,10 +34,16 @@ public class WarehouseController implements Runnable{
                         carWarehouse.wait();
                     }
                 }
-                //Создать Worker -> передать в submit -> свободный worker_pull вызывает задачу Runnable(run) внутри него
+
+                //Создать Worker -> передать в submit -> worker_pull в свободном потоке вызывает задачу Runnable(run) внутри него
+                //sumbit принимает только объект типа Runnable
+                //Runnable task = queue.take();
+                //task.run();
+
                 worker_pool.submit(new Worker(bodyWarehouse,engineWarehouse,accessoryWarehouse, carWarehouse,
                         (b,e,a) -> new Cars(b,e,a),500));
-                //Executor.execute(Runnable);
+                //вместо Executor.execute(Runnable);
+                Thread.sleep(500);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
