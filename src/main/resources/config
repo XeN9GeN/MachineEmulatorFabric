@@ -1,7 +1,8 @@
-BodyWarehouseSize = 100;
-EngineWarehouseSize = 100;
-AccessoryWarehouseSize = 100;
-ProductWarehouseSize = 100;
-AccessorySuppliers = 5;
-Workers = 10;
-Dealers = 20;
+BodyWarehouseSize = 100
+EngineWarehouseSize = 100
+AccessoryWarehouseSize = 100
+ProductWarehouseSize = 100
+AccessorySuppliers = 5
+WorkersAmount = 10
+DealersAmount = 20
+LogSale = true

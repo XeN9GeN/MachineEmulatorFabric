@@ -6,37 +6,49 @@ import Model.FactoryComponents.FinishedProducts.Cars;
 import Model.FactoryComponents.Suppliers.*;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Model.FactoryComponents.Workers.Worker;
+import Utils.Config;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Warehouse<Body> bodyWarehouse = new Warehouse<>(10);
-        Warehouse<Engine> engineWarehouse = new Warehouse<>(10);
-        Warehouse<Accessory> accessoryWarehouse = new Warehouse<>(10);
-        Warehouse<Cars> carsWarehouse = new Warehouse<>(10);
+        Config config = new Config();
 
-        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,100,(id) -> new Body(id));
-        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,100, (id) -> new Engine(id));
-        Supplier<Accessory> accessorySupplier = new Supplier<>(accessoryWarehouse,100, id -> new Accessory(id));
-
-
-        Dealer dealer1 = new Dealer(carsWarehouse,(c) -> System.out.println("Car was successfully sold"), 200);
-        Dealer dealer2 = new Dealer(carsWarehouse,(c) -> System.out.println("Car was successfully sold"), 100);
+        int configBodyWarehouseSize = config.getInt("BodyWarehouseSize");
+        int configEngineWarehouseSize = config.getInt("EngineWarehouseSize");
+        int configAccessoryWarehouseSize = config.getInt("AccessoryWarehouseSize");
+        int configProductWarehouseSize = config.getInt("ProductWarehouseSize");
+        int configAccessorySuppliers = config.getInt("AccessorySuppliers");
+        int configWorkersAmount = config.getInt("WorkersAmount");
+        int configDealersAmount = config.getInt("DealersAmount");
 
 
-        ExecutorService pool = Executors.newFixedThreadPool(10);//10 потоков
-        WarehouseController warehouseController = new WarehouseController(carsWarehouse,
-                bodyWarehouse,engineWarehouse,accessoryWarehouse, pool);
 
-        Thread myt = new Thread(bodySupplier);
-        myt.start();
+        Warehouse<Body> bodyWarehouse = new Warehouse<>(configBodyWarehouseSize);
+        Warehouse<Engine> engineWarehouse = new Warehouse<>(configEngineWarehouseSize);
+        Warehouse<Accessory> accessoryWarehouse = new Warehouse<>(configAccessoryWarehouseSize);
+        Warehouse<Cars> carsWarehouse = new Warehouse<>(configProductWarehouseSize);
 
+        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,(id) -> new Body(id));
+        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, (id) -> new Engine(id));
+
+
+
+        ExecutorService w_pool = Executors.newFixedThreadPool(configWorkersAmount);
+        ExecutorService as_pool = Executors.newFixedThreadPool(configAccessorySuppliers);
+        ExecutorService d_pool = Executors.newFixedThreadPool(configDealersAmount);
+
+
+        for(int i=0;i<configDealersAmount;i++){
+            d_pool.submit(new Dealer(carsWarehouse, (Cars c) -> System.out.println("SOLD"),10000));
+        }
+        for(int i=0;i<configAccessorySuppliers;i++){
+            as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,(id) -> new Accessory(id)));
+        }
+        WarehouseController warehouseController = new WarehouseController(carsWarehouse, bodyWarehouse,engineWarehouse,accessoryWarehouse, w_pool);
+        new Thread(bodySupplier).start();
         new Thread(engineSupplier).start();
-        new Thread(accessorySupplier).start();
-        new Thread(dealer1).start();
-        new Thread(dealer2).start();
         new Thread(warehouseController).start();
     }
 }

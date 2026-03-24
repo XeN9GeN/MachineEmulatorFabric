@@ -41,9 +41,9 @@ public class WarehouseController implements Runnable{
                 //task.run();
 
                 worker_pool.submit(new Worker(bodyWarehouse,engineWarehouse,accessoryWarehouse, carWarehouse,
-                        (b,e,a) -> new Cars(b,e,a),500));
+                        (b,e,a) -> new Cars(b,e,a),1000));
                 //вместо Executor.execute(Runnable);
-                Thread.sleep(500);
+                Thread.sleep(2000);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
