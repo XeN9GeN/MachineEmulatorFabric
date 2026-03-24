@@ -42,5 +42,8 @@ public class Warehouse<T>{
     public int getSize(){ return list.size();}
 
 
-
+    public boolean isFull() {
+        if(list.size()==capacity) return true;
+        return false;
+    }
 }

@@ -28,17 +28,16 @@ public class Worker implements Runnable{
   @Override
   public void run(){
       try{
-          while (!Thread.currentThread().isInterrupted()){
-             Engine e = engineWarehouse.take();
-             Body b = bodyWarehouse.take();
-             Accessory a = accessoryWarehouse.take();
+          Engine e = engineWarehouse.take();
+          Body b = bodyWarehouse.take();
+          Accessory a = accessoryWarehouse.take();
 
-             Cars t = carCreator.doCar(b,e,a);
-             System.out.println("Car was successfully created by " + workerID + " worker");
-             sendCar(t);
-             System.out.println("Car was successfully sent on a finished product warehouse");
-             Thread.sleep(delay);
-          }
+          Cars t = carCreator.doCar(b,e,a);
+          System.out.println("Car was successfully created by " + workerID + " worker");
+          sendCar(t);
+          System.out.println("Car was successfully sent on a finished product warehouse");
+          Thread.sleep(delay);
+
       }  catch (InterruptedException e) {
           Thread.currentThread().interrupt();
       }
