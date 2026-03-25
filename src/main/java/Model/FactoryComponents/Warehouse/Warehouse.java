@@ -1,6 +1,8 @@
 package Model.FactoryComponents.Warehouse;
 
 
+import Utils.FactLogger;
+
 import java.util.LinkedList;
 
 
@@ -20,8 +22,8 @@ public class Warehouse<T>{
 
         String T = item.getClass().getSimpleName();
         if(T.equals("Car")) {
-            System.out.println(String.format("[CAR STORAGE] %s posted | %s;PUT;%d", T, T, list.size()));
-        }else System.out.println(String.format("[DETAIL STORAGE] %s delivered | %s;PUT;%d", T, T, list.size()));
+           FactLogger.info(String.format("[CAR STORAGE] %s posted | %s;PUT;%d", T, T, list.size()));
+        }else  FactLogger.info(String.format("[DETAIL STORAGE] %s delivered | %s;PUT;%d", T, T, list.size()));
 
         notifyAll();
     }
@@ -36,8 +38,8 @@ public class Warehouse<T>{
 
         String T = obj.getClass().getSimpleName();
         if(T.equals("Car")){
-            System.out.println(String.format("[CAR STORAGE] %s taken " + "for sale | %s;TAKE;%d", T, T, list.size()));
-        }else System.out.println(String.format("[DETAIL STORAGE] %s taken | %s;TAKE;%d", T, T, list.size()));
+            FactLogger.info(String.format("[CAR STORAGE] %s taken " + "for sale | %s;TAKE;%d", T, T, list.size()));
+        }else  FactLogger.info(String.format("[DETAIL STORAGE] %s taken | %s;TAKE;%d", T, T, list.size()));
 
         notifyAll();
         return obj;

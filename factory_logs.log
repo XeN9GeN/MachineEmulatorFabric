@@ -1,0 +1,177 @@
+мар. 25, 2026 5:35:02 PM Utils.FactLogger <clinit>
+INFO: Exe is running
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;1
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;2
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;1
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [FACTORY] Car created | ID: 1
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car posted | Car;PUT;1
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [WORKER] #1 finished Car #1 | Total:1
+
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
+мар. 25, 2026 5:35:02 PM Utils.FactLogger info
+INFO: SOLD
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;2
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;3
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;2
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [FACTORY] Car created | ID: 2
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car posted | Car;PUT;1
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [WORKER] #2 finished Car #2 | Total:2
+
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
+мар. 25, 2026 5:35:03 PM Utils.FactLogger info
+INFO: SOLD
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;3
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;4
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;3
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [FACTORY] Car created | ID: 3
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car posted | Car;PUT;1
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [WORKER] #3 finished Car #3 | Total:3
+
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
+мар. 25, 2026 5:35:04 PM Utils.FactLogger info
+INFO: SOLD
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;4
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;5
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;4
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [FACTORY] Car created | ID: 4
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car posted | Car;PUT;1
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [WORKER] #4 finished Car #4 | Total:4
+
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
+мар. 25, 2026 5:35:05 PM Utils.FactLogger info
+INFO: SOLD
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;5
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;6
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;5
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [FACTORY] Car created | ID: 5
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car posted | Car;PUT;1
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [WORKER] #5 finished Car #5 | Total:5
+
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
+мар. 25, 2026 5:35:06 PM Utils.FactLogger info
+INFO: SOLD
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;6
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;7
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;6
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [FACTORY] Car created | ID: 6
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car posted | Car;PUT;1
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [WORKER] #6 finished Car #6 | Total:6
+
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
+мар. 25, 2026 5:35:07 PM Utils.FactLogger info
+INFO: SOLD
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;5
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [FACTORY] Car created | ID: 7
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;6
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car posted | Car;PUT;1
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [WORKER] #7 finished Car #7 | Total:7
+
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;7
+мар. 25, 2026 5:35:08 PM Utils.FactLogger info
+INFO: SOLD

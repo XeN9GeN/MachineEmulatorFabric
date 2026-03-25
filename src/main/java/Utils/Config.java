@@ -7,7 +7,6 @@ public class Config {
     private final Properties pr = new Properties();
 
     public Config(){
-        System.out.println(getClass().getClassLoader().getResource("config"));
         try(InputStream f = getClass().getClassLoader().getResourceAsStream("config")){
             if(f==null){
                 System.out.println("gg null");

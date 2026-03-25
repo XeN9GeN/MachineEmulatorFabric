@@ -5,6 +5,7 @@ import Model.FactoryComponents.Details.Body;
 import Model.FactoryComponents.Details.Engine;
 import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Warehouse.Warehouse;
+import Utils.FactLogger;
 
 public class Worker implements Runnable{
   private final Warehouse<Body> bodyWarehouse;
@@ -24,6 +25,7 @@ public class Worker implements Runnable{
       this.carsWarehouse=c;
       this.carCreator = i;
       this.delay = d;
+
       totalWorkers++;
       this.workerID=totalWorkers;
   }
@@ -38,7 +40,7 @@ public class Worker implements Runnable{
           Car t = carCreator.doCar(b,e,a);
           sendCar(t);
 
-          System.out.printf("[WORKER] #%d finished Car #%d | Total:%d%n", workerID, t.getCarID(), Car.getTotal());
+          FactLogger.info(String.format("[WORKER] #%d finished Car #%d | Total:%d%n", workerID, t.getCarID(), Car.getTotal()));
           Thread.sleep(delay);
 
       }  catch (InterruptedException e) {

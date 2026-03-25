@@ -6,6 +6,7 @@ import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Suppliers.*;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.Config;
+import Utils.FactLogger;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -23,9 +24,6 @@ public class Main {
         int configDealersAmount = config.getInt("DealersAmount");
         boolean b = config.getBol("LogSale");
 
-        if(b){
-
-        }
 
 
         Warehouse<Body> bodyWarehouse = new Warehouse<>(configBodyWarehouseSize);
@@ -44,7 +42,7 @@ public class Main {
 
 
         for(int i=0;i<configDealersAmount;i++){
-            d_pool.submit(new Dealer(carsWarehouse, (Car c) -> System.out.println("SOLD"),10000));
+            d_pool.submit(new Dealer(carsWarehouse, (Car c) -> FactLogger.info("SOLD"),10000));
         }
         for(int i=0;i<configAccessorySuppliers;i++){
             as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,(id) -> new Accessory(id)));
