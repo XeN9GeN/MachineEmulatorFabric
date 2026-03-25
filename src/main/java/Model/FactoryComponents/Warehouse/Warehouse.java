@@ -1,9 +1,6 @@
 package Model.FactoryComponents.Warehouse;
 
 
-import Model.FactoryComponents.Details.Detail;
-import Model.FactoryComponents.FinishedProducts.Cars;
-
 import java.util.LinkedList;
 
 
@@ -19,10 +16,13 @@ public class Warehouse<T>{
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
         list.add(item);
-        System.out.println("Supplier delivered 1 item: " + item.getClass().getSimpleName());
-        System.out.println("Amount in warehouse " + getSize());
+
+        String T = item.getClass().getSimpleName();
+        if(T.equals("Car")) {
+            System.out.println(String.format("[CAR STORAGE] %s posted | %s;PUT;%d", T, T, list.size()));
+        }else System.out.println(String.format("[DETAIL STORAGE] %s delivered | %s;PUT;%d", T, T, list.size()));
+
         notifyAll();
     }
 
@@ -32,18 +32,18 @@ public class Warehouse<T>{
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
         T obj = list.removeFirst();
-        System.out.println("Worker took 1 item");
+
+        String T = obj.getClass().getSimpleName();
+        if(T.equals("Car")){
+            System.out.println(String.format("[CAR STORAGE] %s taken " + "for sale | %s;TAKE;%d", T, T, list.size()));
+        }else System.out.println(String.format("[DETAIL STORAGE] %s taken | %s;TAKE;%d", T, T, list.size()));
+
         notifyAll();
         return obj;
     }
 
-    public int getSize(){ return list.size();}
-
-
     public boolean isFull() {
-        if(list.size()==capacity) return true;
-        return false;
+        return list.size() == capacity;
     }
 }

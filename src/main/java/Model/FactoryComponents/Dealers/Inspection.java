@@ -1,9 +1,9 @@
 package Model.FactoryComponents.Dealers;
 
 
-import Model.FactoryComponents.FinishedProducts.Cars;
+import Model.FactoryComponents.FinishedProducts.Car;
 
 @FunctionalInterface
 public interface Inspection {
-    void sellCar(Cars c);
+    void sellCar(Car c);
 }

@@ -2,10 +2,9 @@
 import Controller.WarehouseController;
 import Model.FactoryComponents.Dealers.Dealer;
 import Model.FactoryComponents.Details.*;
-import Model.FactoryComponents.FinishedProducts.Cars;
+import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Suppliers.*;
 import Model.FactoryComponents.Warehouse.Warehouse;
-import Model.FactoryComponents.Workers.Worker;
 import Utils.Config;
 
 import java.util.concurrent.ExecutorService;
@@ -22,13 +21,17 @@ public class Main {
         int configAccessorySuppliers = config.getInt("AccessorySuppliers");
         int configWorkersAmount = config.getInt("WorkersAmount");
         int configDealersAmount = config.getInt("DealersAmount");
+        boolean b = config.getBol("LogSale");
 
+        if(b){
+
+        }
 
 
         Warehouse<Body> bodyWarehouse = new Warehouse<>(configBodyWarehouseSize);
         Warehouse<Engine> engineWarehouse = new Warehouse<>(configEngineWarehouseSize);
         Warehouse<Accessory> accessoryWarehouse = new Warehouse<>(configAccessoryWarehouseSize);
-        Warehouse<Cars> carsWarehouse = new Warehouse<>(configProductWarehouseSize);
+        Warehouse<Car> carsWarehouse = new Warehouse<>(configProductWarehouseSize);
 
         Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,(id) -> new Body(id));
         Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, (id) -> new Engine(id));
@@ -41,12 +44,14 @@ public class Main {
 
 
         for(int i=0;i<configDealersAmount;i++){
-            d_pool.submit(new Dealer(carsWarehouse, (Cars c) -> System.out.println("SOLD"),10000));
+            d_pool.submit(new Dealer(carsWarehouse, (Car c) -> System.out.println("SOLD"),10000));
         }
         for(int i=0;i<configAccessorySuppliers;i++){
             as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,(id) -> new Accessory(id)));
         }
-        WarehouseController warehouseController = new WarehouseController(carsWarehouse, bodyWarehouse,engineWarehouse,accessoryWarehouse, w_pool);
+        WarehouseController warehouseController = new WarehouseController(carsWarehouse, bodyWarehouse,
+                engineWarehouse,accessoryWarehouse, w_pool);
+
         new Thread(bodySupplier).start();
         new Thread(engineSupplier).start();
         new Thread(warehouseController).start();

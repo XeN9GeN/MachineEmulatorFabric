@@ -3,20 +3,20 @@ package Model.FactoryComponents.Workers;
 import Model.FactoryComponents.Details.Accessory;
 import Model.FactoryComponents.Details.Body;
 import Model.FactoryComponents.Details.Engine;
-import Model.FactoryComponents.FinishedProducts.Cars;
+import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Warehouse.Warehouse;
 
 public class Worker implements Runnable{
   private final Warehouse<Body> bodyWarehouse;
   private final Warehouse<Engine> engineWarehouse;
   private final Warehouse<Accessory> accessoryWarehouse;
-  private final Warehouse<Cars> carsWarehouse;
+  private final Warehouse<Car> carsWarehouse;
   private final CarCreator carCreator;
   private static int totalWorkers=0;
-  private int workerID=0;
+  private final int workerID;
   private final int delay;
 
-  public Worker(Warehouse<Body> bw, Warehouse<Engine> ew, Warehouse<Accessory> aw, Warehouse<Cars> c,
+  public Worker(Warehouse<Body> bw, Warehouse<Engine> ew, Warehouse<Accessory> aw, Warehouse<Car> c,
                 CarCreator i, int d){
       this.bodyWarehouse=bw;
       this.engineWarehouse=ew;
@@ -35,10 +35,10 @@ public class Worker implements Runnable{
           Body b = bodyWarehouse.take();
           Accessory a = accessoryWarehouse.take();
 
-          Cars t = carCreator.doCar(b,e,a);
-          System.out.println("Car was successfully created by " + workerID + " worker");
+          Car t = carCreator.doCar(b,e,a);
           sendCar(t);
-          System.out.println("Car was successfully sent on a finished product warehouse");
+
+          System.out.printf("[WORKER] #%d finished Car #%d | Total:%d%n", workerID, t.getCarID(), Car.getTotal());
           Thread.sleep(delay);
 
       }  catch (InterruptedException e) {
@@ -46,7 +46,7 @@ public class Worker implements Runnable{
       }
   }
 
-  public void sendCar(Cars c){
+  public void sendCar(Car c){
       try {
           carsWarehouse.put(c);
       } catch (InterruptedException e) {
