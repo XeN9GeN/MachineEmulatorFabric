@@ -1,1 +1,1 @@
-Simulator of car creating process/fabric
+An application that simulates the work of a car assembly factory
