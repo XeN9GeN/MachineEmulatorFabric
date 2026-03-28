@@ -4,24 +4,24 @@ import Model.FactoryComponents.Details.*;
 import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Model.FactoryComponents.Workers.Worker;
+import Utils.ThreadPool;
 
-import java.util.concurrent.ExecutorService;
 
 public class WarehouseController implements Runnable{
     private final Warehouse<Car> carWarehouse;
-    private final ExecutorService worker_pool;
+    private final ThreadPool worker_pools;
 
     private final Warehouse<Body> bodyWarehouse;
     private final Warehouse<Engine> engineWarehouse;
     private final Warehouse<Accessory> accessoryWarehouse;
 
     public WarehouseController(Warehouse<Car> carWarehouse, Warehouse<Body> bw, Warehouse<Engine> ew,
-                               Warehouse<Accessory> aw, ExecutorService workers) {
+                               Warehouse<Accessory> aw, ThreadPool workers) {
         this.carWarehouse = carWarehouse;
         this.bodyWarehouse = bw;
         this.engineWarehouse = ew;
         this.accessoryWarehouse = aw;
-        this.worker_pool = workers;
+        this.worker_pools = workers;
     }
 
 
@@ -39,7 +39,7 @@ public class WarehouseController implements Runnable{
                 //Runnable task = queue.take();
                 //task.run();
 
-                worker_pool.submit(new Worker(bodyWarehouse,engineWarehouse,accessoryWarehouse, carWarehouse,
+                worker_pools.submit(new Worker(bodyWarehouse,engineWarehouse,accessoryWarehouse, carWarehouse,
                         (b,e,a) -> new Car(b,e,a),1000));
 
                 //вместо Executor.execute(Runnable);

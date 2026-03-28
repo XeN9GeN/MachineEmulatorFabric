@@ -7,6 +7,7 @@ import Model.FactoryComponents.Suppliers.*;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.Config;
 import Utils.FactLogger;
+import Utils.ThreadPool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -36,7 +37,7 @@ public class Main {
 
 
 
-        ExecutorService w_pool = Executors.newFixedThreadPool(configWorkersAmount);
+        ThreadPool w_pool = new ThreadPool(configWorkersAmount);
         ExecutorService as_pool = Executors.newFixedThreadPool(configAccessorySuppliers);
         ExecutorService d_pool = Executors.newFixedThreadPool(configDealersAmount);
 
