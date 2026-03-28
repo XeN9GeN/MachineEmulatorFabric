@@ -17,7 +17,6 @@ public class FactLogger {
         } catch (Exception e) {
             log.log(Level.SEVERE, "Log dead");
         }
-        log.info("Exe is running");
     }
 
     public static void info(String m){log.info(m);}
