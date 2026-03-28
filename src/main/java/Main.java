@@ -9,6 +9,8 @@ import Utils.Config;
 import Utils.FactLogger;
 import Utils.ThreadPool;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -38,16 +40,28 @@ public class Main {
 
 
         ThreadPool w_pool = new ThreadPool(configWorkersAmount);
-        ExecutorService as_pool = Executors.newFixedThreadPool(configAccessorySuppliers);
-        ExecutorService d_pool = Executors.newFixedThreadPool(configDealersAmount);
+        ThreadPool as_pool = new ThreadPool(configAccessorySuppliers);
+        ThreadPool d_pool = new ThreadPool(configDealersAmount);
 
 
-        for(int i=0;i<configDealersAmount;i++){
-            d_pool.submit(new Dealer(carsWarehouse, (Car c) -> FactLogger.info("SOLD"),10000));
+        for (int i = 0; i < configDealersAmount; i++) {
+            int dealerId = i;
+            d_pool.submit(new Dealer(carsWarehouse, (Car c) -> {
+                String time = LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss"));
+
+                String logMessage = String.format(
+                        "Time: %s Dealer %d: Auto %d (Body: %d, Motor: %d, Accessory: %d)",
+                        time,
+                        dealerId,c.getCarID(),c.getBody().getId(), c.getEngine().getId(),c.getAccessory().getId()
+                );
+
+                FactLogger.info(logMessage);
+            }, 10000));
         }
         for(int i=0;i<configAccessorySuppliers;i++){
             as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,(id) -> new Accessory(id)));
         }
+
         WarehouseController warehouseController = new WarehouseController(carsWarehouse, bodyWarehouse,
                 engineWarehouse,accessoryWarehouse, w_pool);
 

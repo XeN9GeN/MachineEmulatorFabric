@@ -1,7 +1,9 @@
 package Model.FactoryComponents.FinishedProducts;
 
+import Model.FactoryComponents.Dealers.Dealer;
 import Model.FactoryComponents.Details.Accessory;
 import Model.FactoryComponents.Details.Body;
+import Model.FactoryComponents.Details.Detail;
 import Model.FactoryComponents.Details.Engine;
 import Utils.FactLogger;
 
@@ -35,5 +37,8 @@ public class Car {
     public int getCarID(){
         return carID;
     }
+    public Detail getBody(){return b;}
+    public Detail getEngine(){return e;}
+    public Detail getAccessory(){ return a;}
 
 }

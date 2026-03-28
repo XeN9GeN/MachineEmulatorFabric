@@ -21,24 +21,6 @@ public class FactLogger {
     }
 
     public static void info(String m){log.info(m);}
-    public static void error(String m, Throwable e) {
-        log.log(Level.SEVERE,m,e);
-    }
 }
 
 
-
-//
-//static Logger loger = Logger.getLogger(Main.class.getName());
-//
-//public static void main(String[] args) throws Exception {
-//
-//    try{
-//        FileHandler fh= new FileHandler("calc_logs.log",true);
-//        loger.addHandler(fh);//return void
-//        fh.setFormatter(new SimpleFormatter());
-//    }
-//    catch (Exception e){
-//        loger.log(Level.SEVERE, "Log dead");
-//    }
-//    loger.info("Exe is running");

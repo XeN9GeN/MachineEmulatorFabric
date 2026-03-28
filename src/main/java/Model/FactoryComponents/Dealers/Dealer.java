@@ -13,6 +13,7 @@ public class Dealer implements  Runnable {
         this.delay=d;
     }
 
+    @Override
     public void run(){
         while (!Thread.currentThread().isInterrupted()){
             try {

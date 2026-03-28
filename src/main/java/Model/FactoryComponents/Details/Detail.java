@@ -4,4 +4,8 @@ public abstract class Detail {
     private int id;
 
     public Detail(int i){ id = i; }
+
+    public int getId() {
+        return id;
+    }
 }
