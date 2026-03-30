@@ -50,4 +50,14 @@ public class WarehouseController implements Runnable{
         }
     }
 
+    public Warehouse<Engine> getE(){
+        return engineWarehouse;
+    }
+    public Warehouse<Body> getB(){
+        return bodyWarehouse;
+    }
+    public Warehouse<Accessory> getA(){
+        return accessoryWarehouse;
+    }
+
 }

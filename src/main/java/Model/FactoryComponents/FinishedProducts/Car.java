@@ -1,11 +1,10 @@
 package Model.FactoryComponents.FinishedProducts;
 
-import Model.FactoryComponents.Dealers.Dealer;
 import Model.FactoryComponents.Details.Accessory;
 import Model.FactoryComponents.Details.Body;
 import Model.FactoryComponents.Details.Detail;
 import Model.FactoryComponents.Details.Engine;
-import Utils.FactLogger;
+import Utils.Log.MainLogger;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,7 +27,7 @@ public class Car {
         this.carID = carIDgen.incrementAndGet();//во время while поток может улететь и запишется прошлое значение
         totalCounter.incrementAndGet();
 
-        FactLogger.info("[FACTORY] Car created | ID: " + carID);
+        MainLogger.info("[FACTORY] Car created | ID: " + carID);
     }
 
     public static int getTotal(){

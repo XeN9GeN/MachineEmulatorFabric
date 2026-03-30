@@ -7,7 +7,6 @@ public class Supplier<T extends Detail> implements Runnable{
     private final Warehouse<T> w;
     private final int delay;
     private final Deliver<T> deliver;
-    private int idC=0;
 
     public Supplier(Warehouse<T> w, int delay, Deliver<T> d) {
         this.w=w;
@@ -19,7 +18,7 @@ public class Supplier<T extends Detail> implements Runnable{
     public void run(){
         while(!Thread.currentThread().isInterrupted()){
             try{
-                T detail = deliver.create(idC++);
+                T detail = deliver.create();
                 w.put(detail);
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
