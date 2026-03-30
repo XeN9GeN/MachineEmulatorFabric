@@ -5,17 +5,24 @@ import Model.FactoryComponents.Details.Body;
 import Model.FactoryComponents.Details.Engine;
 import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Warehouse.Warehouse;
-import Utils.FactLogger;
+import Model.Observers.FactoryObserver;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Worker implements Runnable{
-  private final Warehouse<Body> bodyWarehouse;
-  private final Warehouse<Engine> engineWarehouse;
+  private List<FactoryObserver> obs = new ArrayList<>();
   private final Warehouse<Accessory> accessoryWarehouse;
+  private final Warehouse<Engine> engineWarehouse;
+  private final Warehouse<Body> bodyWarehouse;
   private final Warehouse<Car> carsWarehouse;
+
   private final CarCreator carCreator;
   private static int totalWorkers=0;
   private final int workerID;
   private final int delay;
+
 
   public Worker(Warehouse<Body> bw, Warehouse<Engine> ew, Warehouse<Accessory> aw, Warehouse<Car> c,
                 CarCreator i, int d){
@@ -30,6 +37,10 @@ public class Worker implements Runnable{
       this.workerID=totalWorkers;
   }
 
+  public void setObs(List<FactoryObserver> obs){
+      this.obs = obs;
+  }
+
   @Override
   public void run(){
       try{
@@ -38,9 +49,13 @@ public class Worker implements Runnable{
           Accessory a = accessoryWarehouse.take();
 
           Car t = carCreator.doCar(b,e,a);
+          for (FactoryObserver o : obs) {
+              o.updateCar(t.getCarID(), Car.getTotal());
+          }
           sendCar(t);
-
-          FactLogger.info(String.format("[WORKER] #%d finished Car #%d | Total:%d%n", workerID, t.getCarID(), Car.getTotal()));
+          for (FactoryObserver o : obs) {
+              o.updateWorker(workerID, t, Car.getTotal());
+          }
           Thread.sleep(delay);
 
       }  catch (InterruptedException e) {
@@ -55,7 +70,4 @@ public class Worker implements Runnable{
           throw new RuntimeException(e);
       }
   }
-
-
-
 }

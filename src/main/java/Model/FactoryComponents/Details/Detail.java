@@ -1,9 +1,14 @@
 package Model.FactoryComponents.Details;
 
-public abstract class Detail {
-    private int id;
+import java.util.concurrent.atomic.AtomicInteger;
 
-    public Detail(int i){ id = i; }
+public abstract class Detail {
+    private final int id;
+
+
+    public Detail(int idd){
+        this.id = idd;
+    }
 
     public int getId() {
         return id;

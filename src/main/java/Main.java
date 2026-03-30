@@ -6,17 +6,20 @@ import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Suppliers.*;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.Config;
-import Utils.FactLogger;
+import Utils.Log.FactoryLog;
+import Utils.Log.MainLogger;
+import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         Config config = new Config();
+        WareHouseLog wareHouseLog = new WareHouseLog();
+        FactoryLog factoryLog = new FactoryLog();
+
 
         int configBodyWarehouseSize = config.getInt("BodyWarehouseSize");
         int configEngineWarehouseSize = config.getInt("EngineWarehouseSize");
@@ -29,14 +32,15 @@ public class Main {
 
 
 
-        Warehouse<Body> bodyWarehouse = new Warehouse<>(configBodyWarehouseSize);
-        Warehouse<Engine> engineWarehouse = new Warehouse<>(configEngineWarehouseSize);
-        Warehouse<Accessory> accessoryWarehouse = new Warehouse<>(configAccessoryWarehouseSize);
-        Warehouse<Car> carsWarehouse = new Warehouse<>(configProductWarehouseSize);
+        Warehouse<Body> bodyWarehouse = new Warehouse<>("Body", configBodyWarehouseSize);
+        Warehouse<Engine> engineWarehouse = new Warehouse<>("Engine", configEngineWarehouseSize);
+        Warehouse<Accessory> accessoryWarehouse = new Warehouse<>("Accessory", configAccessoryWarehouseSize);
+        Warehouse<Car> carsWarehouse = new Warehouse<>("Cars", configProductWarehouseSize);
 
-        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,(id) -> new Body(id));
-        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, (id) -> new Engine(id));
-
+        bodyWarehouse.addObs(wareHouseLog);
+        engineWarehouse.addObs(wareHouseLog);
+        accessoryWarehouse.addObs(wareHouseLog);
+        carsWarehouse.addObs(wareHouseLog);
 
 
         ThreadPool w_pool = new ThreadPool(configWorkersAmount);
@@ -55,15 +59,19 @@ public class Main {
                         dealerId,c.getCarID(),c.getBody().getId(), c.getEngine().getId(),c.getAccessory().getId()
                 );
 
-                FactLogger.info(logMessage);
+                MainLogger.info(logMessage);
             }, 10000));
         }
+
+        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,() -> new Body());
+        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, () -> new Engine());
         for(int i=0;i<configAccessorySuppliers;i++){
-            as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,(id) -> new Accessory(id)));
+            as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,() -> new Accessory()));
         }
 
         WarehouseController warehouseController = new WarehouseController(carsWarehouse, bodyWarehouse,
                 engineWarehouse,accessoryWarehouse, w_pool);
+        warehouseController.addObs(factoryLog);
 
         new Thread(bodySupplier).start();
         new Thread(engineSupplier).start();

@@ -1,5 +1,5 @@
 package Model.Observers;
 
-public class WarehouseObserver {
-
+public interface WarehouseObserver {
+    void updateWare(String n, int curS, int cap);
 }
