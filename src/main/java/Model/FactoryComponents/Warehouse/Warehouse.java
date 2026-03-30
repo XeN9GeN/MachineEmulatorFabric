@@ -2,15 +2,13 @@ package Model.FactoryComponents.Warehouse;
 
 
 import Model.Observers.WarehouseObserver;
-import Utils.Log.MainLogger;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 
 public class Warehouse<T>{
-    private final LinkedList<T> list = new LinkedList<>();
+    private final LinkedList<T> list = new LinkedList<>();//хранение объектов
     private final int capacity;
     private final String name;
     private final List<WarehouseObserver> obs = new ArrayList<>();//Можно приклеить что угодно
@@ -24,14 +22,13 @@ public class Warehouse<T>{
 
     public void addObs(WarehouseObserver o){
         obs.add(o);
-        o.update(name, list.size(), capacity);
+        o.updateWare(name, list.size(), capacity);
     }
     private void notifyObs(){
         for(WarehouseObserver o : obs){
-            o.update(name, list.size(),capacity);
+            o.updateWare(name, list.size(),capacity);
         }
     }
-
 
 
     public synchronized void put(T item) throws InterruptedException{

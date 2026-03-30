@@ -1,12 +1,19 @@
 package Utils.Log;
 
 
-public class FactoryLog extends  MainLogger{
+import Model.FactoryComponents.FinishedProducts.Car;
+import Model.Observers.FactoryObserver;
+
+public class FactoryLog extends MainLogger implements FactoryObserver {
 
     @Override
-    public void update(String n, int size, int cap){
-        WareHouseLog.info(String.format("[STORAGE] %s update | Count: %d/%d",
-                n, size, cap));
+    public void updateCar(int carID, int totalCreated){
+        MainLogger.info("[FACTORY] Car created | ID: " + carID);
     }
 
+    @Override
+    public void updateWorker(int workerID, Car car, int total){
+        MainLogger.info(String.format("[WORKER] #%d finished Car #%d | Total:%d%n", workerID, car.getCarID(), Car.getTotal()));
+
+    }
 }

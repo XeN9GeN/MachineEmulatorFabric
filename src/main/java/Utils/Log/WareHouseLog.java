@@ -1,9 +1,11 @@
 package Utils.Log;
 
-public class WareHouseLog extends MainLogger{
+import Model.Observers.WarehouseObserver;
+
+public class WareHouseLog extends MainLogger implements WarehouseObserver {
 
     @Override
-    public void update(String n, int size, int cap){
+    public void updateWare(String n, int size, int cap){
         WareHouseLog.info(String.format("[%s STORAGE] update | Count: %d/%d",
                 n, size, cap));
     }

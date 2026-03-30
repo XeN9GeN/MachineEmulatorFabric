@@ -1,650 +1,208 @@
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;1
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;2
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;1
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 2/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 1
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
 INFO: [WORKER] #1 finished Car #1 | Total:1
 
-мар. 30, 2026 4:19:33 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:33 Dealer 0: Auto 1 (Body: 1, Motor: 1, Accessory: 1)
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;2
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;3
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;2
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:42 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:42 Dealer 0: Auto 1 (Body: 1, Motor: 1, Accessory: 1)
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 2/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 3/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 2/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 2
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
 INFO: [WORKER] #2 finished Car #2 | Total:2
 
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:34 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:34 Dealer 1: Auto 2 (Body: 2, Motor: 2, Accessory: 2)
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;3
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;4
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;3
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:43 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:43 Dealer 1: Auto 2 (Body: 2, Motor: 2, Accessory: 2)
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 3/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 4/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 3/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 3
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
 INFO: [WORKER] #3 finished Car #3 | Total:3
 
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:35 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:35 Dealer 2: Auto 3 (Body: 3, Motor: 3, Accessory: 4)
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;4
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;3
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:44 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:44 Dealer 2: Auto 3 (Body: 3, Motor: 3, Accessory: 3)
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 4/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 5/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 4/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 4
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
 INFO: [WORKER] #4 finished Car #4 | Total:4
 
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;4
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:36 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:36 Dealer 3: Auto 4 (Body: 4, Motor: 4, Accessory: 3)
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;5
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;6
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;5
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:45 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:45 Dealer 3: Auto 4 (Body: 4, Motor: 4, Accessory: 4)
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 5/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 6/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 5/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 5
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
 INFO: [WORKER] #5 finished Car #5 | Total:5
 
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:37 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:37 Dealer 4: Auto 5 (Body: 5, Motor: 5, Accessory: 5)
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;6
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;5
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:46 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:46 Dealer 4: Auto 5 (Body: 5, Motor: 5, Accessory: 5)
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 6/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 7/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 6/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 6
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;6
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
 INFO: [WORKER] #6 finished Car #6 | Total:6
 
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:38 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:38 Dealer 5: Auto 6 (Body: 6, Motor: 6, Accessory: 6)
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;7
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;8
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;7
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:47 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:47 Dealer 5: Auto 6 (Body: 6, Motor: 6, Accessory: 6)
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 7/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 8/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 7/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 7
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
 INFO: [WORKER] #7 finished Car #7 | Total:7
 
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:39 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:39 Dealer 6: Auto 7 (Body: 7, Motor: 7, Accessory: 7)
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;8
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;9
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;8
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:48 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:48 Dealer 6: Auto 7 (Body: 7, Motor: 7, Accessory: 7)
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 8/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 9/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Body STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 8/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 8
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 1/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
 INFO: [WORKER] #8 finished Car #8 | Total:8
 
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:40 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:40 Dealer 7: Auto 8 (Body: 8, Motor: 8, Accessory: 8)
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;9
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;8
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 9
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [WORKER] #9 finished Car #9 | Total:9
-
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;9
-мар. 30, 2026 4:19:41 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:41 Dealer 8: Auto 9 (Body: 9, Motor: 9, Accessory: 9)
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;10
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;11
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;10
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 10
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [WORKER] #10 finished Car #10 | Total:10
-
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:42 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:42 Dealer 9: Auto 10 (Body: 10, Motor: 10, Accessory: 10)
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;11
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;12
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;11
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 11
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [WORKER] #11 finished Car #11 | Total:11
-
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:43 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:43 Dealer 10: Auto 11 (Body: 11, Motor: 11, Accessory: 11)
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;12
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;13
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;12
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 12
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [WORKER] #12 finished Car #12 | Total:12
-
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:44 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:44 Dealer 11: Auto 12 (Body: 12, Motor: 12, Accessory: 12)
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;13
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;14
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;13
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 13
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [WORKER] #13 finished Car #13 | Total:13
-
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:45 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:45 Dealer 12: Auto 13 (Body: 13, Motor: 13, Accessory: 13)
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;14
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;13
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 14
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;14
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [WORKER] #14 finished Car #14 | Total:14
-
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:46 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:46 Dealer 13: Auto 14 (Body: 14, Motor: 14, Accessory: 14)
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;15
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;14
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 15
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;15
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [WORKER] #15 finished Car #15 | Total:15
-
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:47 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:47 Dealer 14: Auto 15 (Body: 15, Motor: 15, Accessory: 15)
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;16
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;17
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;16
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 16
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [WORKER] #25 finished Car #16 | Total:16
-
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:48 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:48 Dealer 15: Auto 16 (Body: 16, Motor: 16, Accessory: 16)
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;17
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;18
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;17
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 17
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [WORKER] #16 finished Car #17 | Total:17
-
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:49 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:49 Dealer 16: Auto 17 (Body: 17, Motor: 17, Accessory: 17)
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;18
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;19
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;18
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 18
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [WORKER] #17 finished Car #18 | Total:18
-
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:50 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:50 Dealer 17: Auto 18 (Body: 18, Motor: 18, Accessory: 18)
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;19
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;20
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;19
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 19
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [WORKER] #28 finished Car #19 | Total:19
-
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:51 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:51 Dealer 18: Auto 19 (Body: 19, Motor: 19, Accessory: 19)
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;20
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;21
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;20
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 20
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [WORKER] #18 finished Car #20 | Total:20
-
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:52 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:52 Dealer 19: Auto 20 (Body: 20, Motor: 20, Accessory: 20)
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;21
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;22
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;21
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 21
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [WORKER] #19 finished Car #21 | Total:21
-
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:53 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:53 Dealer 0: Auto 21 (Body: 21, Motor: 21, Accessory: 21)
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;22
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;23
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;22
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 22
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [WORKER] #31 finished Car #22 | Total:22
-
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:54 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:54 Dealer 1: Auto 22 (Body: 22, Motor: 22, Accessory: 22)
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;23
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;24
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;23
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 23
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [WORKER] #20 finished Car #23 | Total:23
-
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:55 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:55 Dealer 2: Auto 23 (Body: 23, Motor: 23, Accessory: 23)
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;24
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;25
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;24
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 24
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [WORKER] #21 finished Car #24 | Total:24
-
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:56 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:56 Dealer 3: Auto 24 (Body: 24, Motor: 24, Accessory: 24)
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;25
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;26
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;25
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 25
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [WORKER] #34 finished Car #25 | Total:25
-
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:57 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:57 Dealer 4: Auto 25 (Body: 25, Motor: 25, Accessory: 25)
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine delivered | Engine;PUT;1
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;26
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body delivered | Body;PUT;1
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Engine taken | Engine;TAKE;0
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Body taken | Body;TAKE;0
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory delivered | Accessory;PUT;27
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [DETAIL STORAGE] Accessory taken | Accessory;TAKE;26
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [FACTORY] Car created | ID: 26
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car posted | Car;PUT;1
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [WORKER] #35 finished Car #26 | Total:26
-
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: [CAR STORAGE] Car taken for sale | Car;TAKE;0
-мар. 30, 2026 4:19:58 PM Utils.Log.MainLogger info
-INFO: Time: 16:19:58 Dealer 5: Auto 26 (Body: 26, Motor: 26, Accessory: 26)
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+мар. 30, 2026 8:38:49 PM Utils.Log.MainLogger info
+INFO: Time: 20:38:49 Dealer 7: Auto 8 (Body: 8, Motor: 8, Accessory: 8)

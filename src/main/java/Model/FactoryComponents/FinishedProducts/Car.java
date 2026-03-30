@@ -20,6 +20,7 @@ public class Car {
     private static final AtomicInteger carIDgen = new AtomicInteger(0);
     private final int carID;
 
+
     public Car(Body d1, Engine d2, Accessory d3){
         this.b=d1;
         this.e=d2;
@@ -27,7 +28,6 @@ public class Car {
         this.carID = carIDgen.incrementAndGet();//во время while поток может улететь и запишется прошлое значение
         totalCounter.incrementAndGet();
 
-        MainLogger.info("[FACTORY] Car created | ID: " + carID);
     }
 
     public static int getTotal(){

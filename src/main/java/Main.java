@@ -6,7 +6,9 @@ import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Suppliers.*;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.Config;
+import Utils.Log.FactoryLog;
 import Utils.Log.MainLogger;
+import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
 
 import java.time.LocalTime;
@@ -15,6 +17,8 @@ import java.time.format.DateTimeFormatter;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         Config config = new Config();
+        WareHouseLog wareHouseLog = new WareHouseLog();
+        FactoryLog factoryLog = new FactoryLog();
 
 
         int configBodyWarehouseSize = config.getInt("BodyWarehouseSize");
@@ -33,9 +37,10 @@ public class Main {
         Warehouse<Accessory> accessoryWarehouse = new Warehouse<>("Accessory", configAccessoryWarehouseSize);
         Warehouse<Car> carsWarehouse = new Warehouse<>("Cars", configProductWarehouseSize);
 
-        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,() -> new Body());
-        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, () -> new Engine());
-
+        bodyWarehouse.addObs(wareHouseLog);
+        engineWarehouse.addObs(wareHouseLog);
+        accessoryWarehouse.addObs(wareHouseLog);
+        carsWarehouse.addObs(wareHouseLog);
 
 
         ThreadPool w_pool = new ThreadPool(configWorkersAmount);
@@ -57,12 +62,16 @@ public class Main {
                 MainLogger.info(logMessage);
             }, 10000));
         }
+
+        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,() -> new Body());
+        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, () -> new Engine());
         for(int i=0;i<configAccessorySuppliers;i++){
             as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,() -> new Accessory()));
         }
 
         WarehouseController warehouseController = new WarehouseController(carsWarehouse, bodyWarehouse,
                 engineWarehouse,accessoryWarehouse, w_pool);
+        warehouseController.addObs(factoryLog);
 
         new Thread(bodySupplier).start();
         new Thread(engineSupplier).start();

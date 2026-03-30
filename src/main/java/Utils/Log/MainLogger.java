@@ -1,14 +1,10 @@
 package Utils.Log;
-
-
-import Model.Observers.WarehouseObserver;
-
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class MainLogger implements WarehouseObserver {
+public class MainLogger{
     private static final Logger log = Logger.getLogger("Fac");
 
     static {
@@ -20,8 +16,6 @@ public class MainLogger implements WarehouseObserver {
             log.log(Level.SEVERE, "Log dead");
         }
     }
-
-    public void update(String nm, int c, int ss){}
 
     public static void info(String m){log.info(m);}
 }
