@@ -10,6 +10,7 @@ import Utils.Log.FactoryLog;
 import Utils.Log.MainLogger;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
+import View.FabricPanel;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -41,6 +42,15 @@ public class Main {
         engineWarehouse.addObs(wareHouseLog);
         accessoryWarehouse.addObs(wareHouseLog);
         carsWarehouse.addObs(wareHouseLog);
+
+        FabricPanel gui = new FabricPanel();
+        bodyWarehouse.addObs(gui.addObsBar(gui.getBodyBar()));
+        engineWarehouse.addObs(gui.addObsBar(gui.getEngineBar()));
+        accessoryWarehouse.addObs(gui.addObsBar(gui.getAccessoryBar()));
+        carsWarehouse.addObs(gui.addObsBar(gui.getCarBar()));
+
+
+
 
 
         ThreadPool w_pool = new ThreadPool(configWorkersAmount);
