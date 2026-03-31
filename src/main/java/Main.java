@@ -35,11 +35,12 @@ public class Main {
         boolean b = config.getBol("LogSale");
 
 
+
+
         Warehouse<Body> bodyWarehouse = new Warehouse<>("Body", configBodyWarehouseSize);
         Warehouse<Engine> engineWarehouse = new Warehouse<>("Engine", configEngineWarehouseSize);
         Warehouse<Accessory> accessoryWarehouse = new Warehouse<>("Accessory", configAccessoryWarehouseSize);
         Warehouse<Car> carsWarehouse = new Warehouse<>("Cars", configProductWarehouseSize);
-
 
         bodyWarehouse.addObs(wareHouseLog);
         engineWarehouse.addObs(wareHouseLog);
@@ -53,10 +54,21 @@ public class Main {
         carsWarehouse.addObs(gui.addObsBar(gui.getCarBar()));
 
 
+
+
         ThreadPool w_pool = new ThreadPool(configWorkersAmount);
         ThreadPool as_pool = new ThreadPool(configAccessorySuppliers);
         ThreadPool d_pool = new ThreadPool(configDealersAmount);
 
+
+
+
+        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,() -> new Body());
+        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, () -> new Engine());
+
+        java.util.ArrayList<Supplier<?>> allSupps = new java.util.ArrayList<>();
+        allSupps.add(bodySupplier);
+        allSupps.add(engineSupplier);
 
         for (int i = 0; i < configDealersAmount; i++) {
             int dealerId = i;
@@ -72,14 +84,6 @@ public class Main {
                 MainLogger.info(logMessage);
             }, 10000));
         }
-
-        Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,() -> new Body());
-        Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, () -> new Engine());
-
-        java.util.ArrayList<Supplier<?>> allSupps = new java.util.ArrayList<>();
-        allSupps.add(bodySupplier);
-        allSupps.add(engineSupplier);
-
         for(int i=0;i<configAccessorySuppliers;i++){
             Supplier<Accessory> accSupp = new Supplier<>(accessoryWarehouse, 1000,() -> new Accessory());
             as_pool.submit(accSupp);

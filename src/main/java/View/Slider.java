@@ -3,8 +3,6 @@ package View;
 import Model.FactoryComponents.Suppliers.Supplier;
 
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
 public class Slider extends JFrame {
     private final JSlider slider;
