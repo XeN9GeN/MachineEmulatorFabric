@@ -38,7 +38,7 @@ public class FabricPanel extends JFrame {
 
     public WarehouseObserver addObsBar(JProgressBar bar) {
         return (name, current, max) -> {
-            //метод updateWare
+            //метод updateWare через лямбду
             SwingUtilities.invokeLater(() -> {
                 bar.setMaximum(max);
                 bar.setValue(current);

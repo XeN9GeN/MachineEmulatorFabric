@@ -5,15 +5,18 @@ import Model.FactoryComponents.Details.*;
 import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Suppliers.*;
 import Model.FactoryComponents.Warehouse.Warehouse;
-import Utils.Config;
+import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
 import Utils.Log.MainLogger;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
 import View.FabricPanel;
+import View.Slider;
 
+import javax.swing.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
@@ -32,11 +35,11 @@ public class Main {
         boolean b = config.getBol("LogSale");
 
 
-
         Warehouse<Body> bodyWarehouse = new Warehouse<>("Body", configBodyWarehouseSize);
         Warehouse<Engine> engineWarehouse = new Warehouse<>("Engine", configEngineWarehouseSize);
         Warehouse<Accessory> accessoryWarehouse = new Warehouse<>("Accessory", configAccessoryWarehouseSize);
         Warehouse<Car> carsWarehouse = new Warehouse<>("Cars", configProductWarehouseSize);
+
 
         bodyWarehouse.addObs(wareHouseLog);
         engineWarehouse.addObs(wareHouseLog);
@@ -48,9 +51,6 @@ public class Main {
         engineWarehouse.addObs(gui.addObsBar(gui.getEngineBar()));
         accessoryWarehouse.addObs(gui.addObsBar(gui.getAccessoryBar()));
         carsWarehouse.addObs(gui.addObsBar(gui.getCarBar()));
-
-
-
 
 
         ThreadPool w_pool = new ThreadPool(configWorkersAmount);
@@ -75,16 +75,30 @@ public class Main {
 
         Supplier<Body> bodySupplier = new Supplier<>(bodyWarehouse,1000,() -> new Body());
         Supplier<Engine> engineSupplier = new Supplier<>(engineWarehouse,1000, () -> new Engine());
+
+        java.util.ArrayList<Supplier<?>> allSupps = new java.util.ArrayList<>();
+        allSupps.add(bodySupplier);
+        allSupps.add(engineSupplier);
+
         for(int i=0;i<configAccessorySuppliers;i++){
-            as_pool.submit(new Supplier<>(accessoryWarehouse, 1000,() -> new Accessory()));
+            Supplier<Accessory> accSupp = new Supplier<>(accessoryWarehouse, 1000,() -> new Accessory());
+            as_pool.submit(accSupp);
+            allSupps.add(accSupp);
         }
+
 
         WarehouseController warehouseController = new WarehouseController(carsWarehouse, bodyWarehouse,
                 engineWarehouse,accessoryWarehouse, w_pool);
         warehouseController.addObs(factoryLog);
 
+
         new Thread(bodySupplier).start();
         new Thread(engineSupplier).start();
         new Thread(warehouseController).start();
+
+
+        SwingUtilities.invokeLater(() -> {
+            new Slider(allSupps.toArray(new Supplier[0]));
+        });
     }
 }

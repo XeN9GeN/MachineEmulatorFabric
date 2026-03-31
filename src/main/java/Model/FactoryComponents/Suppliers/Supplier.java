@@ -5,7 +5,7 @@ import Model.FactoryComponents.Warehouse.Warehouse;
 
 public class Supplier<T extends Detail> implements Runnable{
     private final Warehouse<T> w;
-    private final int delay;
+    private volatile int delay;
     private final Deliver<T> deliver;
 
     public Supplier(Warehouse<T> w, int delay, Deliver<T> d) {
@@ -25,5 +25,10 @@ public class Supplier<T extends Detail> implements Runnable{
                 Thread.currentThread().interrupt();
             }
         }
+    }
+
+
+    public void setDelay(int n){
+        this.delay = n;
     }
 }
