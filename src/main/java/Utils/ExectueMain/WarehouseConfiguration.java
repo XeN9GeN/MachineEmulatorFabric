@@ -14,7 +14,7 @@ public class WarehouseConfiguration {
         Warehouse<Body> bodyWarehouse = new Warehouse<>("BODY",c.getBodyWarehouseSize());
         bodyWarehouse.addObs(whl);
         bodyWarehouse.addObs(gui.addObsBar(gui.getBodyBar()));
-        return  bodyWarehouse;
+        return bodyWarehouse;
     }
 
     public Warehouse<Engine> createEngineWarehouse(FactoryConfiguration c, WareHouseLog whl, FabricPanel gui) {

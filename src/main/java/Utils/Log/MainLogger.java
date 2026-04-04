@@ -6,10 +6,11 @@ import java.util.logging.SimpleFormatter;
 
 public class MainLogger{
     private static final Logger log = Logger.getLogger("Fac");
+    private static FileHandler fh;
 
     static {
         try {
-            FileHandler fh = new FileHandler("factory_logs.log",true);
+            fh = new FileHandler("factory_logs.log",true);
             log.addHandler(fh);
             fh.setFormatter(new SimpleFormatter());
         } catch (Exception e) {
@@ -18,6 +19,12 @@ public class MainLogger{
     }
 
     public static void info(String m){log.info(m);}
+    public void close(){
+        if (fh != null) {
+            fh.flush();
+            fh.close();
+        }
+    }
 }
 
 

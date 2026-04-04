@@ -9,12 +9,15 @@ import Model.FactoryComponents.Suppliers.Supplier;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
+import Utils.Log.MainLogger;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
 import View.FabricPanel;
 import View.Slider;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Initializer {
     private final FactoryConfiguration factoryConfiguration;
@@ -31,6 +34,10 @@ public class Initializer {
     private Warehouse<Accessory> accessoryWarehouse;
     private Warehouse<Car> carWarehouse;
 
+    public static volatile boolean isPaused = false;
+    private final List<Thread> threadList = new ArrayList<>();
+
+
 
     public Initializer() {
         this.factoryConfiguration = new FactoryConfiguration(new Config());
@@ -43,13 +50,25 @@ public class Initializer {
         this.wareHouseLog = new WareHouseLog();
     }
 
-
+    public List<Thread> getThreadList(){
+        return threadList;
+    }
     public void GO(){
         storageCreate();
         supplsCreate();
         controllerCreate();
         dealersCreate();
         GUI();
+        isPaused = false;
+    }
+
+    public void STOP(){
+        System.out.println("DONE");
+        for(Thread t : threadList){
+            t.interrupt();
+        }
+        factoryLog.close();
+        wareHouseLog.close();
     }
 
 
@@ -64,7 +83,7 @@ public class Initializer {
         Supplier<Body> bodySupplier = supplierConfiguration.createBodySupplier(bodyWarehouse);
         Supplier<Engine> engineSupplier = supplierConfiguration.createEngineSupplier(engineWarehouse);
         supplierConfiguration.createAccessorySupplier(accessoryWarehouse);
-        supplierConfiguration.startSuppsThreads(bodySupplier, engineSupplier);
+        supplierConfiguration.startSuppsThreads(bodySupplier, engineSupplier,threadList);
     }
 
     public void controllerCreate() {
@@ -72,7 +91,11 @@ public class Initializer {
         WarehouseController warehouseController = new WarehouseController(carWarehouse, bodyWarehouse,
                 engineWarehouse, accessoryWarehouse, w_pool);
         warehouseController.addObs(factoryLog);
-        new Thread(warehouseController).start();
+
+        Thread t = new Thread(warehouseController);
+
+        threadList.add(t);
+        t.start();
     }
 
     public void dealersCreate(){

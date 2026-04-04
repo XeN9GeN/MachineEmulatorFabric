@@ -8,6 +8,7 @@ import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.ThreadPool;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SupplierConfiguration {
     private final ArrayList<Supplier<?>> allSupps = new ArrayList<>();
@@ -42,13 +43,18 @@ public class SupplierConfiguration {
     }
 
 
-
     public ArrayList<Supplier<?>> getAllSuppliers() {
         return allSupps;
     }
 
-    public void startSuppsThreads(Supplier<Body> s, Supplier<Engine> e){
-        new Thread(s).start();
-        new Thread(e).start();
+    public void startSuppsThreads(Supplier<Body> s, Supplier<Engine> e, List<Thread> t) {
+        Thread tBody = new Thread(s);
+        Thread tEngine = new Thread(e);
+
+        t.add(tBody);
+        t.add(tEngine);
+
+        tBody.start();
+        tEngine.start();
     }
 }

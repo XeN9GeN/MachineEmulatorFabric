@@ -24,7 +24,7 @@ public class ThreadPool {
     //объект, постоянно выполняющий Runnable tasks
     private class ExecutorRunTask implements Runnable{
         @Override
-        public void run(){//1
+        public void run(){
             while(true){
 
                 Runnable t;
