@@ -10,7 +10,7 @@ public class MainLogger{
 
     static {
         try {
-            fh = new FileHandler("factory_logs.log",true);
+            fh = new FileHandler("factory_logs.log",false);
             log.addHandler(fh);
             fh.setFormatter(new SimpleFormatter());
         } catch (Exception e) {

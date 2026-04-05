@@ -13,26 +13,24 @@ public class CSV{
 
     public void BD(){
         // Регулярка: [Группа 1: Время] [Группа 2: Объект] [Группа 3: Действие] [Группа 4: Данные]
-        Pattern pattern = Pattern.compile("(\\d{2}:\\d{2}:\\d{2}).*?INFO: \\[(.*?)\\] (.*?) \\| (.*)");
-
-        try(BufferedReader reader = new BufferedReader(new FileReader(log_file))) {
-            PrintWriter writer = new PrintWriter(ex_file);
+        Pattern pattern = Pattern.compile("INFO: Time: (\\d{2}:\\d{2}:\\d{2}) (Dealer \\d+): (Auto \\d+) \\((.*)\\)");
+        try(BufferedReader reader = new BufferedReader(new FileReader(log_file));
+            PrintWriter writer = new PrintWriter(new FileWriter(ex_file))) {
 
             writer.println("Time;Component;Action;Details");
             String line;
             while((line=reader.readLine())!=null){
-                Matcher m = pattern.matcher(line);//класс сравнения строки с регуляркой
+                Matcher m = pattern.matcher(line);//класс сравнения строки с регуляркой под Pattern
                 if(m.find()){
+                    //time dealer auto details
                     writer.printf("%s;%s;%s;%s%n", m.group(1), m.group(2), m.group(3), m.group(4));
                 }
             }
-            System.out.println("Good");
+            System.out.println("CSV export finished successfully.");
 
 
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        }catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

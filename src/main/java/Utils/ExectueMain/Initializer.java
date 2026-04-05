@@ -7,6 +7,7 @@ import Model.FactoryComponents.Details.Engine;
 import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Suppliers.Supplier;
 import Model.FactoryComponents.Warehouse.Warehouse;
+import Utils.FIleWork.CSV;
 import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
 import Utils.Log.WareHouseLog;
@@ -48,6 +49,7 @@ public class Initializer {
         this.gui = new FabricPanel();
         this.factoryLog = new FactoryLog();
         this.wareHouseLog = new WareHouseLog();
+        isPaused = false;
     }
 
 
@@ -67,6 +69,9 @@ public class Initializer {
         }
         factoryLog.close();
         wareHouseLog.close();
+        isPaused=true;
+
+        new CSV().BD();
     }
 
 
@@ -114,8 +119,7 @@ public class Initializer {
     public Slider getSlider() {
         return slider;
     }
-
-    public List<Thread> getThreadList(){
-        return threadList;
+    public Boolean getPause(){
+        return isPaused;
     }
 }
