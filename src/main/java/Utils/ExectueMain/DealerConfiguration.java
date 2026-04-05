@@ -8,14 +8,15 @@ import Utils.ThreadPool;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class DealerConfiguration {
     private final FactoryConfiguration fc;
     private final ThreadPool d_pool;
 
-    public DealerConfiguration(FactoryConfiguration f){
+    public DealerConfiguration(FactoryConfiguration f, List<Thread> t){
         this.fc =f;
-        this.d_pool = new ThreadPool(fc.getDealersAmount());
+        this.d_pool = new ThreadPool(fc.getDealersAmount(), t);
     }
 
 

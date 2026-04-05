@@ -1,15 +1,19 @@
 package Utils;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 //Аналог ExecuteService
 public class ThreadPool {
     private final Queue<Runnable> taskQ = new LinkedList<>();
 
-    public ThreadPool(int threadcount){
+    public ThreadPool(int threadcount,List<Thread> t){//list для сохранения
+        // всех трэдов и их остановки
         for(int i=0;i<threadcount;i++){
-            new Thread(new ExecutorRunTask(),"PoolWorker-" + i).start();
+            Thread thr = new Thread(new ExecutorRunTask(),"PoolWorker-" + i);
+            t.add(thr);
+            thr.start();
         }
     }
 
@@ -50,6 +54,4 @@ public class ThreadPool {
             }
         }
     }
-
-
 }

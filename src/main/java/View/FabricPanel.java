@@ -6,16 +6,15 @@ import Model.Observers.WarehouseObserver;
 import javax.swing.*;
 import java.awt.*;
 
-public class FabricPanel extends JFrame {
+public class FabricPanel extends JPanel {
     private final JProgressBar bodyBar = new JProgressBar();
     private final JProgressBar engineBar = new JProgressBar();
     private final JProgressBar accessoryBar = new JProgressBar();
     private final JProgressBar carBar = new JProgressBar();
 
     public FabricPanel(){
-        setTitle("Factory Monitor");
-        setSize(400,300);
-        setLayout(new GridLayout(4,2));
+        setLayout(new GridLayout(4, 2, 5, 5));
+        setBorder(BorderFactory.createTitledBorder("Warehouse Monitor"));
 
         add(new JLabel(" Bodies:")); add(bodyBar);
         add(new JLabel(" Engines:")); add(engineBar);
@@ -26,9 +25,6 @@ public class FabricPanel extends JFrame {
         setupBar(engineBar);
         setupBar(accessoryBar);
         setupBar(carBar);
-
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setVisible(true);
     }
 
     private void setupBar(JProgressBar bar){

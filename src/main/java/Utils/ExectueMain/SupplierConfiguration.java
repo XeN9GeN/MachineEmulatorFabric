@@ -12,13 +12,13 @@ import java.util.List;
 
 public class SupplierConfiguration {
     private final ArrayList<Supplier<?>> allSupps = new ArrayList<>();
-    private final ThreadPool as_poll;
+    private final ThreadPool access_pools;
     private final FactoryConfiguration fc;
 
-    public SupplierConfiguration(FactoryConfiguration f) {
+    public SupplierConfiguration(FactoryConfiguration f, List<Thread> t) {
         this.fc = f;
-        this.as_poll = new ThreadPool(fc.getAccessorySuppliers());
-    }
+        this.access_pools = new ThreadPool(fc.getAccessorySuppliers(), t);//ВОТ ЭТО THREAD'Ы ДЛЯ ACC_SUPPS
+     }
 
 
 
@@ -36,16 +36,12 @@ public class SupplierConfiguration {
 
     public void createAccessorySupplier(Warehouse<Accessory> warehouse) {
         for (int i = 0; i < fc.getAccessorySuppliers(); i++) {
-            Supplier<Accessory> a = new Supplier<>(warehouse, 1000, () -> new Accessory());
-            as_poll.submit(a);
+            Supplier<Accessory> a = new Supplier<>(warehouse, 1000, () -> new Accessory());//run task, не Thread!!!
+            access_pools.submit(a);
             allSupps.add(a);
         }
     }
 
-
-    public ArrayList<Supplier<?>> getAllSuppliers() {
-        return allSupps;
-    }
 
     public void startSuppsThreads(Supplier<Body> s, Supplier<Engine> e, List<Thread> t) {
         Thread tBody = new Thread(s);
@@ -56,5 +52,9 @@ public class SupplierConfiguration {
 
         tBody.start();
         tEngine.start();
+    }
+
+    public ArrayList<Supplier<?>> getAllSuppliers() {
+        return allSupps;
     }
 }

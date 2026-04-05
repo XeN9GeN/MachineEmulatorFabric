@@ -9,7 +9,6 @@ import Model.FactoryComponents.Suppliers.Supplier;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
-import Utils.Log.MainLogger;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
 import View.FabricPanel;
@@ -26,6 +25,7 @@ public class Initializer {
     private final SupplierConfiguration supplierConfiguration;
 
     private final FabricPanel gui;
+    private Slider slider;
     private final FactoryLog factoryLog;
     private final WareHouseLog wareHouseLog;
 
@@ -42,17 +42,15 @@ public class Initializer {
     public Initializer() {
         this.factoryConfiguration = new FactoryConfiguration(new Config());
         this.warehouseConfiguration = new WarehouseConfiguration();
-        this.dealerConfiguration = new DealerConfiguration(factoryConfiguration);
-        this.supplierConfiguration = new SupplierConfiguration(factoryConfiguration);
+        this.dealerConfiguration = new DealerConfiguration(factoryConfiguration, threadList);
+        this.supplierConfiguration = new SupplierConfiguration(factoryConfiguration, threadList);
 
         this.gui = new FabricPanel();
         this.factoryLog = new FactoryLog();
         this.wareHouseLog = new WareHouseLog();
     }
 
-    public List<Thread> getThreadList(){
-        return threadList;
-    }
+
     public void GO(){
         storageCreate();
         supplsCreate();
@@ -72,6 +70,7 @@ public class Initializer {
     }
 
 
+
     public void storageCreate() {
         bodyWarehouse = warehouseConfiguration.createBodyWarehouse(factoryConfiguration, wareHouseLog, gui);
         engineWarehouse = warehouseConfiguration.createEngineWarehouse(factoryConfiguration, wareHouseLog, gui);
@@ -86,8 +85,12 @@ public class Initializer {
         supplierConfiguration.startSuppsThreads(bodySupplier, engineSupplier,threadList);
     }
 
+    public void dealersCreate(){
+        dealerConfiguration.createDealers(carWarehouse);
+    }
+
     public void controllerCreate() {
-        ThreadPool w_pool = new ThreadPool(factoryConfiguration.getWorkersAmount());
+        ThreadPool w_pool = new ThreadPool(factoryConfiguration.getWorkersAmount(), threadList);
         WarehouseController warehouseController = new WarehouseController(carWarehouse, bodyWarehouse,
                 engineWarehouse, accessoryWarehouse, w_pool);
         warehouseController.addObs(factoryLog);
@@ -98,13 +101,21 @@ public class Initializer {
         t.start();
     }
 
-    public void dealersCreate(){
-        dealerConfiguration.createDealers(carWarehouse);
-    }
+
 
     public void GUI() {
-        SwingUtilities.invokeLater(() -> {
-            new Slider(supplierConfiguration.getAllSuppliers().toArray(new Supplier[0]));
-        });
+        this.slider = new Slider(supplierConfiguration.getAllSuppliers().toArray(new Supplier[0]));
+    }
+
+    public FabricPanel getFabricPanel() {
+        return gui;
+    }
+
+    public Slider getSlider() {
+        return slider;
+    }
+
+    public List<Thread> getThreadList(){
+        return threadList;
     }
 }
