@@ -49,7 +49,7 @@ public class ViewController {
             @Override
             public void keyPressed(KeyEvent k){
 
-                if(k.getKeyCode() == KeyEvent.VK_ESCAPE){
+                if(k.getKeyCode() == KeyEvent.VK_ESCAPE || k.getKeyCode() == KeyEvent.VK_F){
                     init.STOP();
                     frame.dispose();
                 }
