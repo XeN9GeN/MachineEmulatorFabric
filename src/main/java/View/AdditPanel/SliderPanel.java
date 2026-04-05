@@ -1,15 +1,15 @@
-package View;
+package View.AdditPanel;
 
 import Model.FactoryComponents.Suppliers.Supplier;
 import javax.swing.*;
 import java.awt.*;
 
 // Наследуемся от JPanel
-public class Slider extends JPanel {
+public class SliderPanel extends JPanel {
     private final JSlider slider;
     private final JLabel valueLabel;
 
-    public Slider(Supplier<?>... suppls) {
+    public SliderPanel(Supplier<?>... suppls) {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         slider = new JSlider(100, 5000, 1000);

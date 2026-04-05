@@ -1,8 +1,8 @@
 package Controller;
 
 import Utils.ExectueMain.Initializer;
-import View.FabricPanel;
-import View.Slider;
+import View.AdditPanel.FabricPanel;
+import View.AdditPanel.SliderPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,11 +12,11 @@ import java.awt.event.KeyEvent;
 public class ViewController {
     private final Initializer init;
     private final FabricPanel fp;
-    private final Slider s;
+    private final SliderPanel s;
     private final JFrame frame;
 
 
-    public ViewController(Initializer i, FabricPanel fabricPanel,Slider s){
+    public ViewController(Initializer i, FabricPanel fabricPanel, SliderPanel s){
         this.init= i;
         this.fp =fabricPanel;
         this.s = s;

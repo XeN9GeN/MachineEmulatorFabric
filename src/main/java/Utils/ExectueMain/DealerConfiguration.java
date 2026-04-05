@@ -23,7 +23,7 @@ public class DealerConfiguration {
 
     public void createDealers(Warehouse<Car> c){
         for(int i=0;i<fc.getDealersAmount();i++){
-            int dealerID=0;
+            int dealerID=i;
             d_pool.submit(new Dealer(c, (Car car) -> {
                 String time = LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss"));
 

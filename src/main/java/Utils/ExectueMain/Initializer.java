@@ -12,10 +12,9 @@ import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
-import View.FabricPanel;
-import View.Slider;
+import View.AdditPanel.FabricPanel;
+import View.AdditPanel.SliderPanel;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class Initializer {
     private final SupplierConfiguration supplierConfiguration;
 
     private final FabricPanel gui;
-    private Slider slider;
+    private SliderPanel slider;
     private final FactoryLog factoryLog;
     private final WareHouseLog wareHouseLog;
 
@@ -109,14 +108,14 @@ public class Initializer {
 
 
     public void GUI() {
-        this.slider = new Slider(supplierConfiguration.getAllSuppliers().toArray(new Supplier[0]));
+        this.slider = new SliderPanel(supplierConfiguration.getAllSuppliers().toArray(new Supplier[0]));
     }
 
     public FabricPanel getFabricPanel() {
         return gui;
     }
 
-    public Slider getSlider() {
+    public SliderPanel getSlider() {
         return slider;
     }
     public Boolean getPause(){

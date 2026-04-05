@@ -1,6 +1,5 @@
-package View;
+package View.AdditPanel;
 
-import Controller.WarehouseController;
 import Model.Observers.WarehouseObserver;
 
 import javax.swing.*;
