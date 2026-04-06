@@ -1,8 +1,8 @@
 package Controller;
 
 import Utils.ExectueMain.Initializer;
-import View.AdditPanel.FabricPanel;
-import View.AdditPanel.SliderPanel;
+import View.FabricPanel;
+import View.SliderPanel;
 
 import javax.swing.*;
 import java.awt.*;
