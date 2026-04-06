@@ -72,6 +72,7 @@ public class Initializer {
         factoryLog.close();
         wareHouseLog.close();
         isPaused=true;
+        componentsPanel.stopTimer();
 
         new CSV().BD();
     }
