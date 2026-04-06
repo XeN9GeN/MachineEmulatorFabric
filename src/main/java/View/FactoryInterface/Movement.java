@@ -30,10 +30,10 @@ public class Movement {
 
     public void draw(Graphics2D gr2){
         gr2.setColor(color);
-        gr2.fillOval((int)x - 5,80,10, 10);
+        gr2.fillOval((int)x,120,10, 10);
     }
 
-    public boolean getA(){
+    public boolean getStatus(){
         return arrived;
     }
 }

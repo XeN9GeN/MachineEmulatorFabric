@@ -15,14 +15,12 @@ public class ComponentsPanel extends JPanel implements WarehouseObserver {
         setBackground(Color.BLACK);
         setPreferredSize(new Dimension(800, 300));
 
-        new Timer(16, e->{
-            for(Movement m : movs){
+        new Timer(50, e->{
+            movs.removeIf(m->{//условие после -> должно возвращать True по определению
                 m.update();
-                if(m.getA()){
-                    movs.remove(m);
-                }
+                return m.getStatus();
+            });
                 repaint();
-            }
         }).start();
     }
 
@@ -46,7 +44,7 @@ public class ComponentsPanel extends JPanel implements WarehouseObserver {
         g2.drawRect(50, 100, 80, 50);
         g2.drawRect(200, 100, 80, 50);
         g2.drawRect(350, 100, 80, 50);
-        g2.drawRect(600, 100, 100, 50);
+        g2.drawRect(500, 100, 100, 50);
         movs.forEach(m -> m.draw(g2));
     }
 }
