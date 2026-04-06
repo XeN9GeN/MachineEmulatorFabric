@@ -1,4 +1,4 @@
-package View.AdditPanel;
+package View;
 
 import Model.Observers.WarehouseObserver;
 

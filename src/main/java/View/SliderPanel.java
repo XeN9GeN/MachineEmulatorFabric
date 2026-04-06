@@ -1,4 +1,4 @@
-package View.AdditPanel;
+package View;
 
 import Model.FactoryComponents.Suppliers.Supplier;
 import javax.swing.*;

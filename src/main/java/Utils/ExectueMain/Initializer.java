@@ -12,11 +12,12 @@ import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
-import View.AdditPanel.FabricPanel;
-import View.AdditPanel.SliderPanel;
-
+import View.FabricPanel;
+import View.FactoryInterface.ComponentsPanel;
+import View.SliderPanel;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Initializer {
     private final FactoryConfiguration factoryConfiguration;
@@ -25,6 +26,7 @@ public class Initializer {
     private final SupplierConfiguration supplierConfiguration;
 
     private final FabricPanel gui;
+    private final ComponentsPanel cp;
     private SliderPanel slider;
     private final FactoryLog factoryLog;
     private final WareHouseLog wareHouseLog;
@@ -46,6 +48,7 @@ public class Initializer {
         this.supplierConfiguration = new SupplierConfiguration(factoryConfiguration, threadList);
 
         this.gui = new FabricPanel();
+        this.cp = new ComponentsPanel();
         this.factoryLog = new FactoryLog();
         this.wareHouseLog = new WareHouseLog();
         isPaused = false;
@@ -118,7 +121,6 @@ public class Initializer {
     public SliderPanel getSlider() {
         return slider;
     }
-    public Boolean getPause(){
-        return isPaused;
-    }
+
+    public ComponentsPanel getCp(){ return  cp; }
 }

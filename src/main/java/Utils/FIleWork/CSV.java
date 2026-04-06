@@ -13,7 +13,7 @@ public class CSV{
 
     public void BD(){
         // Регулярка: [Группа 1: Время] [Группа 2: Объект] [Группа 3: Действие] [Группа 4: Данные]
-        Pattern pattern = Pattern.compile("INFO: Time: (\\d{2}:\\d{2}:\\d{2}) (Dealer \\d+): (Auto \\d+) \\((.*)\\)");
+        Pattern pattern = Pattern.compile("INFO: Time: (\\d{1,2}:\\d{2}:\\d{2}) (Dealer \\d+): (Auto \\d+) \\((.*)\\)");
         try(BufferedReader reader = new BufferedReader(new FileReader(log_file));
             PrintWriter writer = new PrintWriter(new FileWriter(ex_file))) {
 

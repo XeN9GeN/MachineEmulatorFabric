@@ -9,10 +9,11 @@ import java.util.List;
 
 public class ComponentsPanel extends JPanel implements WarehouseObserver {
     private final List<Movement> movs = new ArrayList<>();
-    private int lastB, lastE, lastA, lastC;
+    private int lastB, lastE, lastA;
 
     public ComponentsPanel(){
         setBackground(Color.BLACK);
+        setPreferredSize(new Dimension(800, 300));
 
         new Timer(16, e->{
             for(Movement m : movs){
@@ -28,9 +29,9 @@ public class ComponentsPanel extends JPanel implements WarehouseObserver {
 
     @Override
     public void updateWare(String n, int cur, int max) {
-        if (n.contains("Body") && cur < lastB) movs.add(new Movement(100, 125, 600, 125, Color.RED));
-        if (n.contains("Engine") && cur < lastE) movs.add(new Movement(250, 125, 600, 125, Color.BLUE));
-        if (n.contains("Accessory") && cur < lastA) movs.add(new Movement(400, 125, 600, 125, Color.ORANGE));
+        if (n.contains("Body") && cur < lastB) movs.add(new Movement(100, 500, Color.RED));
+        if (n.contains("Engine") && cur < lastE) movs.add(new Movement(250, 500, Color.BLUE));
+        if (n.contains("Accessory") && cur < lastA) movs.add(new Movement(400, 500, Color.ORANGE));
 
         if (n.contains("Body")) lastB = cur;
         if (n.contains("Engine")) lastE = cur;
