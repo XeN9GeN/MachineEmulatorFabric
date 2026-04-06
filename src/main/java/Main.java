@@ -10,7 +10,7 @@ public class Main {
         Initializer initializer = new Initializer();
         initializer.GO();
 
-        ViewController vc = new ViewController(initializer,initializer.getFabricPanel(), initializer.getSlider());
+        ViewController vc = new ViewController(initializer,initializer.getFabricPanel(), initializer.getSlider(), initializer.getCp());
 
     }
 }

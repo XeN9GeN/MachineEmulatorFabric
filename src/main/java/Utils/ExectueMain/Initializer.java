@@ -12,8 +12,8 @@ import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
-import View.FabricPanel;
-import View.SliderPanel;
+import View.AdditPanel.FabricPanel;
+import View.AdditPanel.SliderPanel;
 
 import java.util.ArrayList;
 import java.util.List;

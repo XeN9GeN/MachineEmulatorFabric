@@ -6,7 +6,7 @@ import Model.FactoryComponents.Details.Engine;
 import Model.FactoryComponents.FinishedProducts.Car;
 import Model.FactoryComponents.Warehouse.Warehouse;
 import Utils.Log.WareHouseLog;
-import View.FabricPanel;
+import View.AdditPanel.FabricPanel;
 
 public class WarehouseConfiguration {
 
