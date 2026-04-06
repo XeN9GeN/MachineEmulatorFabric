@@ -1,8 +1,9 @@
 package Controller;
 
 import Utils.ExectueMain.Initializer;
-import View.AdditPanel.FabricPanel;
-import View.AdditPanel.SliderPanel;
+import View.FabricPanel;
+import View.FactoryInterface.ComponentsPanel;
+import View.SliderPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,15 +14,18 @@ public class ViewController {
     private final Initializer init;
     private final FabricPanel fp;
     private final SliderPanel s;
+    private final ComponentsPanel cp;
     private final JFrame frame;
 
 
-    public ViewController(Initializer i, FabricPanel fabricPanel, SliderPanel s){
+    public ViewController(Initializer i, FabricPanel fabricPanel, SliderPanel s, ComponentsPanel cp){
         this.init= i;
         this.fp =fabricPanel;
         this.s = s;
+        this.cp =cp;
 
         this.frame = new JFrame("FACTORY");
+
 
         setFrame();
         setupKey();
@@ -30,10 +34,12 @@ public class ViewController {
 
     private void setFrame(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1000,500);
 
         JPanel main = new JPanel(new BorderLayout());
         main.add(fp,BorderLayout.EAST);
         main.add(s,BorderLayout.WEST);
+        main.add(cp, BorderLayout.CENTER);
 
         frame.add(main);
 
