@@ -1,83 +1,83 @@
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Body STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Engine STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Cars STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
-INFO: [Engine STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
-INFO: [Accessory STORAGE] update | Count: 2/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Body STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 2/100
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Engine STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Body STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 1
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [Cars STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
+INFO: [Cars STORAGE] update | Count: 0/100
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
 INFO: [WORKER] #1 finished Car #1 | Total:1
 
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
-INFO: [Cars STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:43 PM Utils.Log.MainLogger info
-INFO: Time: 12:06:43 Dealer 0: Auto 1 (Body: 1, Motor: 1, Accessory: 1)
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
-INFO: [Engine STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:35 PM Utils.Log.MainLogger info
+INFO: Time: 12:24:35 Dealer 0: Auto 1 (Body: 1, Motor: 1, Accessory: 1)
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 2/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Body STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
+INFO: [Engine STORAGE] update | Count: 1/100
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 3/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Engine STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Body STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 2/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 2
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Cars STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
-INFO: [WORKER] #2 finished Car #2 | Total:2
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
+INFO: [WORKER] #3 finished Car #2 | Total:2
 
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
 INFO: [Cars STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:44 PM Utils.Log.MainLogger info
-INFO: Time: 12:06:44 Dealer 1: Auto 2 (Body: 2, Motor: 2, Accessory: 2)
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:36 PM Utils.Log.MainLogger info
+INFO: Time: 12:24:36 Dealer 1: Auto 2 (Body: 2, Motor: 2, Accessory: 2)
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
+INFO: [Accessory STORAGE] update | Count: 3/100
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Engine STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
-INFO: [Accessory STORAGE] update | Count: 3/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Body STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 4/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Engine STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Body STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Accessory STORAGE] update | Count: 3/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [FACTORY] Car created | ID: 3
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Cars STORAGE] update | Count: 1/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [WORKER] #5 finished Car #3 | Total:3
 
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
 INFO: [Cars STORAGE] update | Count: 0/100
-апр. 06, 2026 12:06:45 PM Utils.Log.MainLogger info
-INFO: Time: 12:06:45 Dealer 2: Auto 3 (Body: 3, Motor: 3, Accessory: 3)
+апр. 06, 2026 12:24:37 PM Utils.Log.MainLogger info
+INFO: Time: 12:24:37 Dealer 2: Auto 3 (Body: 3, Motor: 3, Accessory: 3)
