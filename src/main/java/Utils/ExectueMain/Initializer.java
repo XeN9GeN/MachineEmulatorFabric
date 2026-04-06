@@ -12,11 +12,12 @@ import Utils.FIleWork.Config;
 import Utils.Log.FactoryLog;
 import Utils.Log.WareHouseLog;
 import Utils.ThreadPool;
-import View.AdditPanel.FabricPanel;
-import View.AdditPanel.SliderPanel;
-
+import View.FabricPanel;
+import View.FactoryInterface.ComponentsPanel;
+import View.SliderPanel;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Initializer {
     private final FactoryConfiguration factoryConfiguration;
@@ -25,6 +26,7 @@ public class Initializer {
     private final SupplierConfiguration supplierConfiguration;
 
     private final FabricPanel gui;
+    private final ComponentsPanel componentsPanel;
     private SliderPanel slider;
     private final FactoryLog factoryLog;
     private final WareHouseLog wareHouseLog;
@@ -46,6 +48,7 @@ public class Initializer {
         this.supplierConfiguration = new SupplierConfiguration(factoryConfiguration, threadList);
 
         this.gui = new FabricPanel();
+        this.componentsPanel = new ComponentsPanel();
         this.factoryLog = new FactoryLog();
         this.wareHouseLog = new WareHouseLog();
         isPaused = false;
@@ -69,6 +72,7 @@ public class Initializer {
         factoryLog.close();
         wareHouseLog.close();
         isPaused=true;
+        componentsPanel.stopTimer();
 
         new CSV().BD();
     }
@@ -76,10 +80,10 @@ public class Initializer {
 
 
     public void storageCreate() {
-        bodyWarehouse = warehouseConfiguration.createBodyWarehouse(factoryConfiguration, wareHouseLog, gui);
-        engineWarehouse = warehouseConfiguration.createEngineWarehouse(factoryConfiguration, wareHouseLog, gui);
-        accessoryWarehouse = warehouseConfiguration.createAccessoryWarehouse(factoryConfiguration, wareHouseLog, gui);
-        carWarehouse = warehouseConfiguration.createCarWarehouse(factoryConfiguration, wareHouseLog, gui);
+        bodyWarehouse = warehouseConfiguration.createBodyWarehouse(factoryConfiguration, wareHouseLog, gui,componentsPanel);
+        engineWarehouse = warehouseConfiguration.createEngineWarehouse(factoryConfiguration, wareHouseLog, gui,componentsPanel);
+        accessoryWarehouse = warehouseConfiguration.createAccessoryWarehouse(factoryConfiguration, wareHouseLog, gui,componentsPanel);
+        carWarehouse = warehouseConfiguration.createCarWarehouse(factoryConfiguration, wareHouseLog, gui,componentsPanel);
     }
 
     public void supplsCreate() {
@@ -118,7 +122,6 @@ public class Initializer {
     public SliderPanel getSlider() {
         return slider;
     }
-    public Boolean getPause(){
-        return isPaused;
-    }
+
+    public ComponentsPanel getCp(){ return componentsPanel; }
 }
